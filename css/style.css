@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: 0px 200px; }
+
+.nav {
+  display: flex;
+  justify-content: space-around; }
+  .nav_menu-logo {
+    width: 35px;
+    display: none;
+    cursor: pointer; }
+    @media screen and (max-width: 997px) {
+      .nav_menu-logo {
+        display: block; } }
+  .nav_close-logo {
+    width: 25px;
+    display: none; }
+    @media screen and (max-width: 997px) {
+      .nav_close-logo {
+        display: block;
+        cursor: pointer; } }
+  .nav_icon {
+    width: 180px; }
+  .nav_item {
+    font-size: 25px;
+    transition: all .5s;
+    cursor: pointer; }
+    .nav_item:hover {
+      font-size: 27px; }
+  .nav_items {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    @media screen and (max-width: 997px) {
+      .nav_items {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.9);
+        gap: 50px; } }
+
+.banner {
+  display: flex;
+  height: 100vh;
+  align-items: center; }
+  @media screen and (max-width: 997px) {
+    .banner {
+      flex-direction: column;
+      gap: 25px;
+      margin: 0 50px; } }
+  .banner_texts {
+    width: 50%; }
+    @media screen and (max-width: 997px) {
+      .banner_texts {
+        width: 100%;
+        text-align: center; } }
+  .banner_title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 25px; }
+    @media screen and (max-width: 1200px) {
+      .banner_title {
+        font-size: 50px;
+        margin-top: 50px; } }
+    @media screen and (max-width: 997px) {
+      .banner_title {
+        font-size: 40px;
+        margin-top: 180px; } }
+  .banner_paragraph {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px; }
+    @media screen and (max-width: 997px) {
+      .banner_paragraph {
+        max-width: 100%; } }
+  .banner_btn {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    background-color: royalblue;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s; }
+    .banner_btn:hover {
+      padding: 17px;
+      border: 1px solid #fff; }
+
+.principal_banner {
+  background-image: url(/images/banner.jpg);
+  background-size: cover;
+  border-bottom: 20px solid #fff; }
+
+.swiper {
+  width: auto;
+  max-width: 800px;
+  height: 400px; }
+  @media screen and (max-width: 1200px) {
+    .swiper {
+      width: 500px;
+      height: 300px; } }
+  @media screen and (max-width: 997px) {
+    .swiper {
+      width: 500px;
+      height: 300px; } }
+  @media screen and (max-width: 600px) {
+    .swiper {
+      width: 400px;
+      height: 300px; } }
+
+.swiper-slide {
+  border-radius: 20px;
+  margin: 0;
+  transition: all .5s;
+  width: auto; }
+  @media screen and (max-width: 600px) {
+    .swiper-slide {
+      width: 200px; } }
+  .swiper-slide:hover {
+    padding: 15px; }
+
+.swiper-button-prev {
+  display: none; }
+
+.swiper-button-next {
+  display: none; }
+
+.show {
+  opacity: 1;
+  pointer-events: all; }
+
+.cards {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #d7ad65;
+  flex-wrap: wrap;
+  border: 20px solid #fff; }
+  .cards_card {
+    position: relative;
+    width: 700px;
+    height: 250px;
+    margin: 40px; }
+  .cards_card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s; }
+  .cards_card .front {
+    transform: perspective(600px) rotateX(0deg);
+    box-shadow: 0 5px 10px #000; }
+  .cards_card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .cards_card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center; }
+  .cards_card .back {
+    transform: perspective(600px) rotateX(180deg);
+    background: #032336;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px #000; }
+  .cards_card .back .link {
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px; }
+  .cards_card .back .link a {
+    color: #f3f3f3; }
+  .cards_card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px; }
+  .cards_card .back p {
+    letter-spacing: 1px; }
+  .cards_card:hover .front {
+    transform: perspective(600px) rotateX(180deg); }
+  .cards_card:hover .back {
+    transform: perspective(600px) rotateX(360deg); }
+
+.reservations_texts {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  background-color: #d7ad65;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.reservations_title {
+  font-size: 100px; }
+  @media screen and (max-width: 1200px) {
+    .reservations_title {
+      font-size: 50px; } }
+
+.reservations_paragraph {
+  font-size: 25px; }
+  @media screen and (max-width: 600px) {
+    .reservations_paragraph {
+      font-size: 20px; } }
+
+.reservations_data {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+  text-align: center;
+  border: 20px solid #fff; }
+  @media screen and (max-width: 997px) {
+    .reservations_data {
+      flex-direction: column; } }
+
+.reservations_img {
+  width: 75%;
+  background-image: url(/images/reservations.jpg);
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media screen and (max-width: 997px) {
+    .reservations_img {
+      width: 100%; } }
+
+.reservations_form {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d7ad65;
+  border-left: 20px solid #fff; }
+
+.reservations_form-title {
+  font-size: 35px; }
+
+.reservations_form-container {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: #fff;
+  padding: 60px;
+  border-radius: 15px; }
+
+.reservations_data-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 80px;
+  color: #fff; }
+  @media screen and (max-width: 1200px) {
+    .reservations_data-title {
+      font-size: 40px; } }
+  @media screen and (max-width: 997px) {
+    .reservations_data-title {
+      font-size: 40px; } }
+  @media screen and (max-width: 600px) {
+    .reservations_data-title {
+      font-size: 25px; } }
+
+.reservations_input {
+  padding: 10px;
+  border-radius: 20px; }
+
+.reservations_btn {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background: #d7ad65;
+  color: #fff;
+  cursor: pointer; }
+
+.form {
+  height: 70vh;
+  border-left: 20px solid #fff;
+  border-right: 20px solid #fff;
+  border-bottom: 20px solid #fff; }
+  .form_backgroung {
+    background-image: url(/images/form.jpg);
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .form_container {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    background-color: #fff;
+    height: fit-content;
+    padding: 80px;
+    border-radius: 10px; }
+    @media screen and (max-width: 1200px) {
+      .form_container {
+        width: 70%; } }
+    @media screen and (max-width: 997px) {
+      .form_container {
+        width: 70%; } }
+    @media screen and (max-width: 687px) {
+      .form_container {
+        width: 80%; } }
+  .form_title {
+    font-size: 2rem; }
+    @media screen and (max-width: 1300px) {
+      .form_title {
+        font-size: 25px; } }
+
+.footer {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; }

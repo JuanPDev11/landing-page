@@ -1,0 +1,183 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+
+    &_menu-logo{
+        width: 35px;
+        display: none;
+        cursor: pointer;
+        @include responsive(997px){
+            display: block;
+            
+        }
+    }
+
+    &_close-logo{
+        width: 25px;
+        display: none;
+        @include responsive(997px){
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    &_icon{
+        width: 180px;
+    }
+
+    &_item{
+        font-size: 25px;
+        transition: all .5s;
+        cursor: pointer;
+        &:hover{
+            font-size: 27px;
+        }
+    }
+    &_items {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 17px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include responsive(997px){
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            z-index: 100;
+            background: rgba(0,0,0,.9);
+            gap: 50px;
+        }
+    }
+}
+
+.banner{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    
+
+    @include responsive(997px){
+        flex-direction: column;
+        gap: 25px;
+        margin: 0 50px;
+    }
+    
+
+    &_texts{
+        width: 50%;
+
+        @include responsive(997px){
+            width: 100%;
+            text-align: center;
+        }
+        
+    }
+
+    &_title{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 80px;
+        color: #fff;
+        margin-bottom: 25px;
+
+        @include responsive(1200px){
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        @include responsive(997px){
+            font-size: 40px;
+            margin-top: 180px;
+        }
+        
+    }
+
+    &_paragraph{
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 30px;
+        max-width: 600px;
+
+        @include responsive(997px){
+            max-width: 100%;
+        }
+        
+    }
+    &_btn{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 18px;
+        background-color: royalblue;
+        border: none;
+        padding: 15px;
+        border-radius: 20px;
+        color: #fff;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover{
+            padding: 17px;
+            border: 1px solid #fff;
+        }
+    }
+}
+
+.principal_banner{
+    background-image: url(/images/banner.jpg);
+    background-size: cover;
+    border-bottom: 20px solid #fff;
+}
+
+.swiper{
+    width: auto;
+    max-width: 800px;
+    height: 400px;
+
+    @include responsive(1200px){
+        width: 500px;
+        height: 300px;
+    }
+
+    @include responsive(997px){
+        width: 500px;
+        height: 300px;
+    }
+
+    @include responsive(600px){
+        width: 400px;
+        height: 300px;
+    }
+}
+.swiper-slide {
+    border-radius: 20px;
+    margin: 0;
+    transition: all .5s;
+    width: auto;
+
+    @include responsive(600px){
+        width: 200px;
+        
+    }
+
+    &:hover{
+        padding: 15px;
+    }
+}
+
+.swiper-button-prev {
+    display: none;
+}  
+
+.swiper-button-next {
+    display: none;
+  }
+
+.show{
+    opacity: 1;
+    pointer-events: all;
+}
