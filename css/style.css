@@ -104,7 +104,7 @@
       border: 1px solid #fff; }
 
 .principal_banner {
-  background-image: url(/images/banner.jpg);
+  background-image: url(../../images/banner.jpg);
   background-size: cover;
   border-bottom: 20px solid #fff; }
 
@@ -246,7 +246,7 @@
 
 .reservations_img {
   width: 75%;
-  background-image: url(/images/reservations.jpg);
+  background-image: url(../../images/reservations.jpg);
   background-size: cover;
   height: 100%;
   display: flex;
@@ -309,7 +309,7 @@
   border-right: 20px solid #fff;
   border-bottom: 20px solid #fff; }
   .form_backgroung {
-    background-image: url(/images/form.jpg);
+    background-image: url(../../images/form.jpg);
     height: 100%;
     background-size: cover;
     display: flex;
